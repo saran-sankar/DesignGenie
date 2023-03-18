@@ -26,6 +26,7 @@ const renderTemplate = (template) => {
     // create download button
     const downloadButton = document.createElement('button');
     downloadButton.textContent = 'Download';
+    downloadButton.classList.add('download-btn');
     downloadButton.onclick = () => {
     downloadHTML(template);
     };
@@ -33,8 +34,7 @@ const renderTemplate = (template) => {
     return container;
 };
 
-const renderTemplates = async () => {
-    const templates = await fetchTemplates();
+const renderTemplates = async (templates) => {
     const container = document.getElementById('templates-container');
     container.innerHTML = '';
     templates.templates.forEach((template) => {
@@ -47,3 +47,26 @@ const renderTemplates = async () => {
     const templates = await fetchTemplates();
     renderTemplates(templates);
 })();
+
+const submitForm = async (event) => {
+  event.preventDefault();
+  const userInput = document.getElementById('user-input').value;
+  const response = await fetch('http://localhost:5000/templates', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ 'user-input': userInput })
+  });
+  const templates = await response.json();
+  renderTemplates(templates);
+  return false;
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('user-form');
+  form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      submitForm(event);
+  });
+});
