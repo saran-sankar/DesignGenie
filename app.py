@@ -1,4 +1,5 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
+
 from flask_cors import CORS
 import nlp_template_generator
 
@@ -13,6 +14,18 @@ def generate_templates(user_input):
     print('Finished generating templates.')
     return templates
     
+@app.route('/home', methods=['GET'])
+def get_homepage():
+    return send_from_directory('.','display_templates.html')
+
+@app.route('/display_templates.js', methods=['GET'])
+def get_script():
+    return send_from_directory('.','display_templates.js')
+
+@app.route('/styles.css', methods=['GET'])
+def get_style():
+    return send_from_directory('.','styles.css')
+           
 @app.route('/templates', methods=['GET', 'POST'])
 def get_templates():
     if request.method == 'POST':
