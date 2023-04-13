@@ -51,7 +51,7 @@ const renderTemplates = async (templates) => {
 const submitForm = async (event) => {
   event.preventDefault();
   const userInput = document.getElementById('user-input').value;
-  const response = await fetch('http://localhost:5000/templates', {
+  const response = await fetch('templates', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
