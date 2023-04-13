@@ -1,5 +1,5 @@
 const fetchTemplates = async () => {
-    const response = await fetch('http://localhost:5000/templates');
+    const response = await fetch('templates');
     const templates = await response.json();
     return templates;
 };
