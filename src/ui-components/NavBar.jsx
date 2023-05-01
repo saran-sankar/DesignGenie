@@ -82,7 +82,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Logo"
+          children="DesignGenie"
           {...getOverrideProps(overrides, "Logo29767075")}
         ></Text>
       </Flex>
@@ -141,7 +141,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Jobs"
+          children="Studio"
           {...getOverrideProps(overrides, "Jobs")}
         ></Text>
         <Text
@@ -163,7 +163,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Applicants"
+          children="Gallery"
           {...getOverrideProps(overrides, "Applicants")}
         ></Text>
         <Text
@@ -185,7 +185,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Company"
+          children="FAQ"
           {...getOverrideProps(overrides, "Company")}
         ></Text>
       </Flex>

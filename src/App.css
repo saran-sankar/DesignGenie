@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.grid-container {
+  margin-left: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* creates 3 equal-width columns */
+  grid-template-rows: repeat(2, 400px); /* creates 2 rows, each with a height of 150 pixels */
+  gap: 100px; /* sets a 10-pixel gap between grid items */
+}

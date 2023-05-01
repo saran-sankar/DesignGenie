@@ -6,17 +6,12 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ButtonProps, FlexProps, ImageProps, RatingProps, TextProps } from "@aws-amplify/ui-react";
+import { ButtonProps, FlexProps, ImageProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ActionCardOverridesProps = {
     ActionCard?: PrimitiveOverrideProps<FlexProps>;
     image?: PrimitiveOverrideProps<ImageProps>;
     "Card Area"?: PrimitiveOverrideProps<FlexProps>;
-    "Main Text"?: PrimitiveOverrideProps<FlexProps>;
-    "Classic Long Sleeve T-Shirt"?: PrimitiveOverrideProps<TextProps>;
-    "Information about this product"?: PrimitiveOverrideProps<TextProps>;
-    Rating?: PrimitiveOverrideProps<RatingProps>;
-    "$99 USD"?: PrimitiveOverrideProps<TextProps>;
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {

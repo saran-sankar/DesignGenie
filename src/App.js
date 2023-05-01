@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+ NavBar,
+ ActionCard,
+} from './ui-components';
 
 function App() {
+  const htmlString = '<h1>Hello, World!</h1><p>This is a sample HTML string.</p>';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <NavBar />
+    <div class="grid-container">
+    <div class="grid-item"><ActionCard /></div>
+    <div class="grid-item"><ActionCard /></div>
+    <div class="grid-item"><ActionCard /></div>
+    <div class="grid-item"><ActionCard /></div>
     </div>
+    </>
   );
 }
 
