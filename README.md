@@ -2,7 +2,7 @@
 
 ## Instructions:
 ```
-git clone https://github.com/saran-sankar/DesignGenie
+git clone git@github.com:saran-sankar/DesignGenie.git
 ```
 ```
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
