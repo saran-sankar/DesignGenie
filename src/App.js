@@ -51,7 +51,7 @@ function App() {
             .then((templates) => {
               const images = document.getElementsByClassName("amplify-image");
               for (let j = 0; j < 2; j++) {
-                const image = images[i + j + 1];
+                const image = images[j + 1];
                 const container = document.createElement("container");
                 container.classList.add("template-box");
                 const html = document.createElement("div");
@@ -108,10 +108,11 @@ function App() {
   return (
     <>
       <NavBar />
+      <h2 class="form-title">Enter Specifications</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="title" className="form-label">
-            Title:
+            Topic:
           </label>
           <input
             type="text"
