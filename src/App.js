@@ -55,10 +55,31 @@ function App() {
               container.classList.add('template-box');
               const html = document.createElement('div');
               html.classList.add('template');
-              const template = templates[j]["html"];
-              html.innerHTML = template;
+              var iframe = document.createElement('iframe');
+              iframe.srcdoc = templates[j]["html"];
+              var iframeWrapper = document.createElement('div');
+              iframeWrapper.appendChild(iframe);
+              html.innerHTML = iframeWrapper.innerHTML;
               container.appendChild(html);
               image.parentNode.replaceChild(container, image);
+
+              // Add button action
+
+              const buttons = document.getElementsByClassName('amplify-button amplify-field-group__control amplify-button--primary amplify-button--large');
+              const firstButton = buttons[i+j];
+              firstButton.addEventListener('click', function() {
+                const htmlContent = templates[j]["html"];
+                const fileBlob = new Blob([htmlContent], { type: 'text/html' });
+                const fileUrl = URL.createObjectURL(fileBlob);
+                const downloadLink = document.createElement('a');
+                downloadLink.href = fileUrl;
+                downloadLink.download = 'page.html';
+                downloadLink.style.display = 'none';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(fileUrl);
+                });
             }
           })
           .catch(error => console.error(error));

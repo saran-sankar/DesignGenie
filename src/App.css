@@ -42,5 +42,28 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* creates 3 equal-width columns */
   grid-template-rows: repeat(2, 400px); /* creates 2 rows, each with a height of 150 pixels */
-  gap: 100px; /* sets a 10-pixel gap between grid items */
+  grid-row-gap: 400px; /* sets a x00-pixel gap between grid rows */
+  grid-column-gap: 10px; /* sets a y0-pixel gap between grid columns */
+}
+
+.template-box {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.template {
+    display: inline-block;
+    width: 350px;
+    height: 600px;
+    vertical-align: bottom;
+}
+
+.template iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
