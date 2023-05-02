@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #f2f2f2;
+}
+
+:root {
+  --primary-color: #273c75;
+  --secondary-color: #44bd32;
+  --background-color: #f5f6fa;
+}
+
+.form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-title {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-button {
+  padding: 10px;
+  background-color: #8B0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.grid-container {
+  margin-left: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* creates 3 equal-width columns */
+  grid-template-rows: repeat(2, 400px); /* creates 2 rows, each with a height of 150 pixels */
+  grid-row-gap: 200px; /* sets a x00-pixel gap between grid rows */
+  grid-column-gap: 10px; /* sets a y0-pixel gap between grid columns */
+}
+
+.template-box {
+    border: 1px solid black;
+    padding: 0px;
+    margin: 10px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.template {
+    display: inline-block;
+    width: 300px;
+    height: 408px;
+    vertical-align: bottom;
+}
+
+.template iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

@@ -1,0 +1,4 @@
+type Template @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  HTML: String
+}

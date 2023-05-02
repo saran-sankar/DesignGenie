@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-designgenie-staging-232012-authRole",
+      "UnauthRoleArn": "arn:aws:iam::257541275568:role/amplify-designgenie-staging-232012-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::257541275568:role/amplify-designgenie-staging-232012-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-designgenie-staging-232012-deployment",
+      "UnauthRoleName": "amplify-designgenie-staging-232012-unauthRole",
+      "StackName": "amplify-designgenie-staging-232012",
+      "StackId": "arn:aws:cloudformation:us-east-1:257541275568:stack/amplify-designgenie-staging-232012/8f01c610-e7ad-11ed-aa19-0e9fd968da73",
+      "AmplifyAppId": "d1jhizg75qb5kk"
+    },
+    "categories": {
+      "auth": {
+        "DesignGenie": {}
+      },
+      "storage": {
+        "designgenie0bc335c3": {
+          "bucketName": "designgenie-template-storage232012-staging",
+          "region": "us-east-1"
+        }
+      }
+    }
+  }
+}
